@@ -9,50 +9,158 @@
 body {
     font-family: Arial, sans-serif;
     font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f7f7f7;
 }
 
-/* Center the content and add some spacing */
-.container {
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+}
+
+header h1 {
+    font-size: 24px;
+}
+
+nav {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    height: 100vh;
 }
 
-.container h1 {
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+section {
+    padding: 80px 0;
+    text-align: center;
+}
+
+#hero {
+    background-color: #007bff;
+    color: #fff;
+}
+
+#hero h2 {
     font-size: 36px;
+}
+
+.about-content,
+.portfolio-content,
+.contact-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-content h2,
+.portfolio-content h2,
+.contact-content h2 {
+    font-size: 32px;
     margin-bottom: 20px;
 }
 
-.container p {
-    font-size: 18px;
-    text-align: center;
-    max-width: 600px;
+.portfolio-content .project {
     margin-bottom: 40px;
 }
 
-/* Apply different styles based on the screen size */
+footer {
+    padding: 20px;
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+}
+
+footer p {
+    font-size: 14px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+form input,
+form textarea,
+form button {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form textarea {
+    resize: vertical;
+}
+
+form button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
 @media screen and (max-width: 768px) {
     /* For screens up to 768px wide */
-    .container h1 {
+    header h1 {
+        font-size: 20px;
+    }
+
+    #hero h2 {
         font-size: 28px;
     }
 
-    .container p {
-        font-size: 16px;
-        margin-bottom: 30px;
+    .about-content h2,
+    .portfolio-content h2,
+    .contact-content h2 {
+        font-size: 28px;
     }
 }
 
 @media screen and (max-width: 480px) {
     /* For screens up to 480px wide (e.g., mobile devices) */
-    .container h1 {
+    header h1 {
+        font-size: 18px;
+    }
+
+    nav {
+        flex-direction: column;
+    }
+
+    nav ul {
+        margin-top: 10px;
+    }
+
+    nav ul li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    #hero h2 {
         font-size: 24px;
     }
 
-    .container p {
-        font-size: 14px;
-        margin-bottom: 20px;
+    .about-content h2,
+    .portfolio-content h2,
+    .contact-content h2 {
+        font-size: 24px;
+    }
+
+    form {
+        max-width: 100%;
     }
 }
